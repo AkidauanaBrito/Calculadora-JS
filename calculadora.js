@@ -11,5 +11,10 @@ input.addEventListener('keydown', function (ev) {
         input.value += ev.key
         return
     }
-
+    if (ev.key === 'Backspace') { //excluir um caracter
+        input.value = input.value.slice(0, -1) //cortar um caracter
+    }
+    if (ev.key === 'Enter') { //exibir o resultado
+        calculate()
+    }
 })
