@@ -6,7 +6,7 @@ const resultInput = document.getElementById("result")
 const allowedKeys = ["(", ")", "/", "*", "-", "+", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%", " "]
 
 document.querySelectorAll('.charKey').forEach(function (charKeyBtn) {
-    charKeyBtn.addEventListener("Click", function () {
+    charKeyBtn.addEventListener("click", function () {
        const value = charKeyBtn.dataset.value
        input.value += value
     })
@@ -31,3 +31,9 @@ input.addEventListener("keydown", function (ev) {
         calculate()
     }
 })
+
+document.getElementById('equal').addEventListener('click', calculate)
+
+function calculate() {
+    console.log('Calculado!')
+}
